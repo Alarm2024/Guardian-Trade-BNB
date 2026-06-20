@@ -1,9 +1,3 @@
-                    if resp.status != 200:
-                        error_text = await resp.text()
-                        logger.error(f"DeepSeek API error: {resp.status} - {error_text}")
-                        return {"risk_level": "unknown", "reasoning": "API error", "recommendation": "reject"}
-                    data = await resp.json()
-                    content = data["choices"][0]["message"]["content"]
                     # Simple parsing – improve as needed
                     risk_level = "medium"
                     recommendation = "reject"
@@ -498,3 +492,12 @@ EOF
 pip install --upgrade -r requirements.txt
 pip install setuptools
 python main.py
+git remote add origin https://github.com/Alarm2024/Guardian-Trade-BNB.git
+git branch -M main
+git push -u origin main
+git remote set-url origin https://github.com/Alarm2024/Guardian-Trade-BNB.git
+git push -u origin main
+git push -u origin main --force
+git reset --soft HEAD~1
+echo -e "\n.venv/\nvenv/\nenv/\n__pycache__/\n*.pyc\n.pytest_cache/\n.next/\nnode_modules/" >> .gitignore
+git rm -r --cached .venv venv env __pycache__ 2>/dev/null
