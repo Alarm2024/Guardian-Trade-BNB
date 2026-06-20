@@ -1,0 +1,67 @@
+[
+    {
+        "cert_id": "VCU-1781839538-5039",
+        "issuer": "Guardian Angel AI Oracle",
+        "beneficiary_wallet": "0x08312f8381f059f5a8a13236CF10b54c08f9C991",
+        "impact": {
+            "timestamp": "2026-06-19T03:25:38.038086",
+            "location": "Zone-C (Power Plant)",
+            "baseline": 191.68,
+            "current": 141.82,
+            "mitigation_tonnes": 49.87
+        },
+        "status": "Verified"
+    },
+    {
+        "cert_id": "VCU-1781839541-8087",
+        "issuer": "Guardian Angel AI Oracle",
+        "beneficiary_wallet": "0x08312f8381f059f5a8a13236CF10b54c08f9C991",
+        "impact": {
+            "timestamp": "2026-06-19T03:25:41.038637",
+            "location": "Zone-B (Steel Mill)",
+            "baseline": 320.93,
+            "current": 165.82,
+            "mitigation_tonnes": 155.11
+        },
+        "status": "Verified"
+    },
+    {
+        "cert_id": "VCU-1781839544-8078",
+        "issuer": "Guardian Angel AI Oracle",
+        "beneficiary_wallet": "0x08312f8381f059f5a8a13236CF10b54c08f9C991",
+        "impact": {
+            "timestamp": "2026-06-19T03:25:44.039130",
+            "location": "Zone-B (Steel Mill)",
+            "baseline": 212.74,
+            "current": 182.37,
+            "mitigation_tonnes": 30.37
+        },
+        "status": "Verified"
+    },
+    {
+        "cert_id": "VCU-1781839547-8925",
+        "issuer": "Guardian Angel AI Oracle",
+        "beneficiary_wallet": "0x08312f8381f059f5a8a13236CF10b54c08f9C991",
+        "impact": {
+            "timestamp": "2026-06-19T03:25:47.039676",
+            "location": "Zone-A (Refinery)",
+            "baseline": 412.99,
+            "current": 243.7,
+            "mitigation_tonnes": 169.29
+        },
+        "status": "Verified"
+    },
+    {
+        "cert_id": "VCU-1781839550-7471",
+        "issuer": "Guardian Angel AI Oracle",
+        "beneficiary_wallet": "0x08312f8381f059f5a8a13236CF10b54c08f9C991",
+        "impact": {
+            "timestamp": "2026-06-19T03:25:50.040178",
+            "location": "Zone-B (Steel Mill)",
+            "baseline": 315.18,
+            "current": 198.7,
+            "mitigation_tonnes": 116.47
+        },
+        "status": "Verified"
+    }
+]

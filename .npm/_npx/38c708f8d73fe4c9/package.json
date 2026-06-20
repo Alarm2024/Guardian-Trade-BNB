@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@google/gemini-cli": "github:google-gemini/gemini-cli"
+  },
+  "_npx": {
+    "packages": [
+      "https://github.com/google-gemini/gemini-cli"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "window.menuBarVisibility": "classic",
+    "window.commandCenter": true,
+    "terminal.integrated.defaultProfile.linux": "Google Cloud Shell",
+    "http.proxySupport": "off"
+}
