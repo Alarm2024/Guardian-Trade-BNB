@@ -1,32 +1,43 @@
-# Elghaly Multi-Chain Arbitrage Framework (Guardian-Trade-BNB)
+# Guardian Angel Carbon
 
-High-performance, multi-chain arbitrage bot engineered for the BSC and Arbitrum networks.
+Guardian Angel Carbon is a sophisticated, high-frequency DeFi arbitrage platform designed for secure and optimized yield generation. By leveraging Uniswap V3 flash swap mechanics, the system executes risk-managed, dual-DEX arbitrage while maintaining strict profitability and safety standards.
 
-## Project Overview
-This framework provides a sophisticated, asynchronous trading environment capable of concurrent multi-chain opportunity scanning, execution, and post-trade reconciliation. Engineered for resilience and profit-maximization.
+## Features
 
-## Key Architecture Modules
-*   **Orchestrator Engine:** Implements a high-concurrency `asyncio.gather` pipeline for parallel multi-chain opportunity handling, protected by strict atomic state locks.
-*   **Executor:** A generalized, multi-chain transaction executor featuring EIP-1559 gas optimization and MEV protection.
-*   **Strategy Intelligence:** Provides on-chain price quoting (V3 Quoter) and TWAP validation.
-*   **Gas Optimizer:** Employs an adaptive 1.125x gas multiplier to maintain optimal block inclusion during high-density network periods.
-*   **Reconciliation Engine:** A critical post-trade accounting module verifying net profit after deducting actual gas costs from realized balance changes.
+- **Automated Flash Arbitrage**: Executes atomic arbitrage swaps using Uniswap V3 flash loans.
+- **Strict Profitability Enforcement**: Built-in slippage protection and minimum profit requirements ensure that no transaction is executed unless it is net-profitable after fees.
+- **Robust Security Framework**: Extensive test coverage using Foundry, including fuzz testing and mainnet forking to simulate real-world market conditions.
+- **Real-time Monitoring**: Integrated Telegram bot for monitoring market conditions, testing cycles, and execution alerts.
 
-## Installation & Dependencies
-1. Ensure Python 3.12+ is installed.
-2. Install dependencies:
-   ```bash
-   pip install -r Guardian-Trade-BNB/requirements.txt
-   ```
-3. Set your environment variables (see `.env.example`).
+## Getting Started
 
-## Execution Guide
-### Simulation Loop (Safe)
+### Prerequisites
+
+- [Foundry](https://book.getfoundry.sh/getting-started/installation)
+
+### Installation
+
 ```bash
-python3 simulate_bot.py
+# Clone the repository
+git clone <repository-url>
+cd <repository-directory>
+
+# Install dependencies
+forge install
 ```
-### Live Trading
-Ensure all production settings are configured in `config/settings.py` and environment secrets are set.
+
+### Running Tests
+
+To run the full suite of security and integration tests against a mainnet fork, ensure your `MAINNET_RPC_URL` is set:
+
 ```bash
-python3 Guardian-Trade-BNB/main.py
+export MAINNET_RPC_URL="<your-rpc-url>"
+forge test --match-path test/FlashArbitrage.t.sol
 ```
+
+## Security Disclaimer
+
+**Use of this software involves significant financial risk.**
+The `FlashArbitrage` contract operates in a high-stakes, competitive DeFi environment. While we have implemented rigorous security measures, including reentrancy guards, atomic execution checks, and extensive fuzz testing, the risk of smart contract exploits, market volatility, or failed execution remains. 
+
+**This software is provided "as is," without warranty of any kind.** Users are solely responsible for all financial decisions and potential losses. Always audit the code yourself and start with small, non-critical amounts in a controlled environment before deploying to mainnet.
